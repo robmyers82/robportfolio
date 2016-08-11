@@ -244,8 +244,6 @@ var GMaps = (function(global) {
       delete map_options[events_that_doesnt_hide_context_menu[i]];
     }
 
-    map_options['key'] = 'AIzaSyAPZN46cV3Mbmba3cPZjjGjmVueGKn6Wsc';
-    console.log(map_options);
     this.map = new google.maps.Map(this.el, map_options);
 
     if (markerClustererFunction) {
@@ -1614,7 +1612,7 @@ GMaps.prototype.toImage = function(options) {
 GMaps.staticMapURL = function(options){
   var parameters = [],
       data,
-      static_root = 'https://maps.googleapis.com/maps/api/staticmap';
+      static_root = 'http://maps.googleapis.com/maps/api/staticmap';
 
   if (options.url) {
     static_root = options.url;
@@ -1657,8 +1655,6 @@ GMaps.staticMapURL = function(options){
     var visible = encodeURI(options.visible.join('|'));
     parameters.push('visible=' + visible);
   }
-
-  parameters.push('key=AIzaSyAPZN46cV3Mbmba3cPZjjGjmVueGKn6Wsc');
 
   var size = options.size;
   if (size) {
@@ -1824,7 +1820,6 @@ GMaps.staticMapURL = function(options){
   parameters.push('scale=' + dpi);
 
   parameters = parameters.join('&');
-  console.log(static_root + parameters);
   return static_root + parameters;
 };
 
