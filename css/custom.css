@@ -1,0 +1,13 @@
+/* your styles go here */
+
+#footer p.social a.twitter {
+	background-color: #00aced;
+}
+
+#footer p.social a.linkedin {
+	background-color: #007bb6;
+}
+
+#footer p.social a.youtube {
+	background-color: #bb0000;
+}
